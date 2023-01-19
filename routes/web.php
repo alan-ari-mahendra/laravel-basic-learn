@@ -1,10 +1,9 @@
 <?php
-
-use App\Models\Post;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Models\Category;
-use App\Models\User;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 
 
@@ -21,13 +20,15 @@ use App\Models\User;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        'active' => 'categories'
     ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
         "title" => "About",
+        'active' => 'categories',
         "name" => "Alan Ari Mahendra",
         "email" => "penjahatk3lam1n.com",
         "image" => "v1.jpg"
@@ -36,31 +37,39 @@ Route::get('/about', function () {
 
 
 //Route -> controller (Models) -> View
-Route::get('/blog', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
     
 // Web Single Post 
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 
-Route::get('/categories', function()
-    {
+Route::get('/categories', function()    {
         return view('categories',[
             'title' => 'Post Categories',
+            'active' => 'categories',
             'categories' => Category::all()
         ]);
     });
 
-Route::get('/categories/{category:slug}', function(Category $category){
-    return view('posts',[
-        'title' => "Post By Category : $category->nama",
-        'posts' => $category->posts->load('category' , 'author')
-    ]);
-});
+// Route::get('/categories/{category:slug}', function(Category $category){
+//     return view('posts',[
+//         'title' => "Post By Category : $category->nama",
+//         'active' => 'categories',
+//         'posts' => $category->posts->load('category' , 'author')
+//     ]);
+// });
 
-Route::get('/authors/{author:username}', function(User $author) {
-    return view('posts', [
-        'title' => "Post By Author : $author->name",
-        'posts' => $author->posts->load('category', 'author')
-    ]);
-});
+// Route::get('/authors/{author:username}', function(User $author) {
+//     return view('posts', [
+//         'title' => "Post By Author : $author->name",
+//         'active' => 'posts',
+//         'posts' => $author->posts->load('category', 'author')
+//     ]);
+// });
 
+
+
+
+Route::get('/login' , [LoginController::class, 'index']); 
+
+Route::get('/register' , [RegisterController::class, 'index']); 
 
