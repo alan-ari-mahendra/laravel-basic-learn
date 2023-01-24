@@ -24,11 +24,12 @@ class DatabaseSeeder extends Seeder
         ]);
         
         
-        // User::create ([
-        //         'name' => 'Alan Ari Mahendra',
-        //         'email' => 'alanari@gamil',
-        //         'password' => bcrypt('22122004')
-        //     ]);
+        User::create ([
+                'name' => 'Alan Ari Mahendra',
+                'username' => 'alanari',
+                'email' => 'alanpekok8@gmail.com',
+                'password' => bcrypt('22122004')
+            ]);
             
         // User::create ([
         //         'name' => 'Dody Wiguna',
@@ -56,43 +57,6 @@ class DatabaseSeeder extends Seeder
 
         Post::factory(20)->create();
 
-
-        // Post::create ([
-        //     'title' => 'Judul Pertama',
-        //     'slug' => 'judul-pertama',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit magnam dolore maiores accusamus mollitia quae animi perferendis quisquam cupiditate pariatur velit facilis neque possimus nostrum in voluptatibus error voluptas, illo atque officiis quam ipsam enim ipsa! Est incidunt laudantium corporis ut tempora delectus blanditiis itaque error architecto, eos temporibus laboriosam veniam quod doloribus repudiandae magni autem, vero quos fuga illum aperiam? Sit unde voluptatem reprehenderit laudantium, et rerum eaque amet aut, nam maxime veniam enim sint incidunt assumenda dignissimos cupiditate. Vitae nemo autem cumque doloribus voluptatum architecto reprehenderit molestias at natus, quam veritatis ipsam alias atque, enim cupiditate adipisci?',
-        //     'category_id' => 1,
-        //     'user_id' => 1
-        // ]);
-
-        
-        // Post::create ([
-        //     'title' => 'Judul Kedua',
-        //     'slug' => 'judul-kedua',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit magnam dolore maiores accusamus mollitia quae animi perferendis quisquam cupiditate pariatur velit facilis neque possimus nostrum in voluptatibus error voluptas, illo atque officiis quam ipsam enim ipsa! Est incidunt laudantium corporis ut tempora delectus blanditiis itaque error architecto, eos temporibus laboriosam veniam quod doloribus repudiandae magni autem, vero quos fuga illum aperiam? Sit unde voluptatem reprehenderit laudantium, et rerum eaque amet aut, nam maxime veniam enim sint incidunt assumenda dignissimos cupiditate. Vitae nemo autem cumque doloribus voluptatum architecto reprehenderit molestias at natus, quam veritatis ipsam alias atque, enim cupiditate adipisci?',
-        //     'category_id' => 1,
-        //     'user_id' => 1
-        // ]);
-
-        // Post::create ([
-        //     'title' => 'Judul Ketiga',
-        //     'slug' => 'judul-ketiga',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit magnam dolore maiores accusamus mollitia quae animi perferendis quisquam cupiditate pariatur velit facilis neque possimus nostrum in voluptatibus error voluptas, illo atque officiis quam ipsam enim ipsa! Est incidunt laudantium corporis ut tempora delectus blanditiis itaque error architecto, eos temporibus laboriosam veniam quod doloribus repudiandae magni autem, vero quos fuga illum aperiam? Sit unde voluptatem reprehenderit laudantium, et rerum eaque amet aut, nam maxime veniam enim sint incidunt assumenda dignissimos cupiditate. Vitae nemo autem cumque doloribus voluptatum architecto reprehenderit molestias at natus, quam veritatis ipsam alias atque, enim cupiditate adipisci?',
-        //     'category_id' => 2,
-        //     'user_id' => 1
-        // ]);
-
-        // Post::create ([
-        //     'title' => 'Judul Keempat',
-        //     'slug' => 'judul-keempat',
-        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit magnam dolore maiores accusamus mollitia quae animi perferendis quisquam cupiditate pariatur velit facilis neque possimus nostrum in voluptatibus error voluptas, illo atque officiis quam ipsam enim ipsa! Est incidunt laudantium corporis ut tempora delectus blanditiis itaque error architecto, eos temporibus laboriosam veniam quod doloribus repudiandae magni autem, vero quos fuga illum aperiam? Sit unde voluptatem reprehenderit laudantium, et rerum eaque amet aut, nam maxime veniam enim sint incidunt assumenda dignissimos cupiditate. Vitae nemo autem cumque doloribus voluptatum architecto reprehenderit molestias at natus, quam veritatis ipsam alias atque, enim cupiditate adipisci?',
-        //     'category_id' => 2,
-        //     'user_id' => 2
-        // ]);
 
 
     }
